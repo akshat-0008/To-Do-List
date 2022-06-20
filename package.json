@@ -8,6 +8,9 @@
   },
   "author": "Akshat Pandey",
   "license": "ISC",
+  "engines": {
+    "node": "16.14.2"
+  },
   "dependencies": {
     "body-parser": "^1.20.0",
     "ejs": "^3.1.8",
