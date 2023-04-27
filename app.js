@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
-const url = `mongodb+srv://akshat0008:620123Ak@cluster0.h8zwpnt.mongodb.net/todolistDB`;
+const url = `mongodb+srv://akshat0008:ehHy5FPSU4iDFvG8@cluster0.sxrjawp.mongodb.net/todolistDB`;
 
 const connectionParams={
     useNewUrlParser: true,
@@ -29,7 +29,7 @@ const itemsSchema = new mongoose.Schema({
     name: String
 });
 
-const Item = mongoose.model("Item",itemsSchema);
+    const Item = mongoose.model("Item",itemsSchema);
 
 const item1 = new Item({
     name: "Click on the Checkbox to delete:"
@@ -118,7 +118,7 @@ app.post("/delete" , function(req,res){
                 console.log(err);
             }
             else{
-                console.log("Successfully deleted!")
+                console.log("Successfully deleted!");
                 res.redirect("/");
             }
         })    
@@ -133,10 +133,6 @@ app.post("/delete" , function(req,res){
 
 })
 
-
-app.get("/about" , function(req,res){
-    res.render("about");
-})
 
 
 let port = process.env.PORT;
